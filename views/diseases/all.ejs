@@ -1,0 +1,12 @@
+<div class="text-center">
+	<h1>Disease List</h1>
+	<p>Maybe you have one, maybe you don't. Kind of like that mysterious ball you keep throwing.</p>
+
+	<% diseases.forEach(function(d){ %>
+<a href="/diseases/<%= d.id %>">
+<p class="text-danger">
+	<%= d.name %>
+</p>
+</a>
+	<% }); %>
+</div>

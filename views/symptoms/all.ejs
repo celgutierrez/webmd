@@ -1,0 +1,11 @@
+<div class="text-center">
+<h1>What are your symptoms?</h1>
+<p>For example: existential crisis about who the good boy is.</p>
+<% symptoms.forEach(function(s){ %>
+<div>
+	<a href="/symptoms/<%= s.id%>">
+<%= s.name %>
+	</a>
+</div>
+<%}); %>
+</div>
