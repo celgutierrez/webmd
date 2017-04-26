@@ -1,12 +1,10 @@
-<div class="text-center">
-	<h1>Disease List</h1>
-	<p>Maybe you have one, maybe you don't. Kind of like that mysterious ball you keep throwing.</p>
+<h1><%=diseases.name%> - <%=disease.severity%> out of 10!</h1>
+<h2>
+<%=diseases.description%>
+<p>You're symptoms are telling this dogtor that you probably have these things.</p>
+<ul class="list-group">
+<% diseases.symptoms.forEach(function(s){%>
+<li class="list-group-item-danger"></li>
+<%});%>
+</ul>
 
-	<% diseases.forEach(function(d){ %>
-<a href="/diseases/<%= d.id %>">
-<p class="text-danger">
-	<%= d.name %>
-</p>
-</a>
-	<% }); %>
-</div>
